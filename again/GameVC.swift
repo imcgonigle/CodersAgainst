@@ -89,6 +89,11 @@ class GameVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // ACTION: Next Question Generator
+    @IBAction func newQuestion(_ sender: UIButton) {
+        randomQuestions()
+    }
+    
     //    ACTION: Selected Card
     @IBAction func whiteCard1Picked(_ sender: Any) {
         if (correctAnswer == "1"){
@@ -132,13 +137,6 @@ class GameVC: UIViewController {
             NSLog("Looooooseer")
         }
     }
-    
-    // ACTION: Next Question Generator
-//    @IBAction func generateNextQuestion(_ sender: Any) {
-//        randomQuestions()
-//
-//    }
-    
     
     /*
     // MARK: - Navigation
