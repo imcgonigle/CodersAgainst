@@ -21,6 +21,8 @@
 		B473F2C51DC7E79400205A2D /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473F2C41DC7E79400205A2D /* GameVC.swift */; };
 		F788F3C71DC9078200E4C258 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F3C61DC9078200E4C258 /* CardsTableViewController.swift */; };
 		F788F3C91DC90B7400E4C258 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F3C81DC90B7400E4C258 /* CardTableViewCell.swift */; };
+		F7BAC1C61DC9240700D52A80 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAC1C51DC9240700D52A80 /* Card.swift */; };
+		F7BAC1CA1DC924C500D52A80 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAC1C91DC924C500D52A80 /* CardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		E08B587E0BD355292D52777D /* Pods_againTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_againTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F788F3C61DC9078200E4C258 /* CardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		F788F3C81DC90B7400E4C258 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		F7BAC1C51DC9240700D52A80 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F7BAC1C91DC924C500D52A80 /* CardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		B473F2931DC7E3C500205A2D /* again */ = {
 			isa = PBXGroup;
 			children = (
+				F7BAC1C81DC924B900D52A80 /* Controllers */,
+				F7BAC1C41DC923E300D52A80 /* Models */,
 				B473F2941DC7E3C500205A2D /* AppDelegate.swift */,
 				F788F3C81DC90B7400E4C258 /* CardTableViewCell.swift */,
 				F788F3C61DC9078200E4C258 /* CardsTableViewController.swift */,
@@ -175,6 +181,22 @@
 				B473F2B61DC7E3C600205A2D /* Info.plist */,
 			);
 			path = againUITests;
+			sourceTree = "<group>";
+		};
+		F7BAC1C41DC923E300D52A80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAC1C51DC9240700D52A80 /* Card.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F7BAC1C81DC924B900D52A80 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAC1C91DC924C500D52A80 /* CardManager.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +481,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B473F2C31DC7E55200205A2D /* InstructionVC.swift in Sources */,
+				F7BAC1CA1DC924C500D52A80 /* CardManager.swift in Sources */,
 				F788F3C71DC9078200E4C258 /* CardsTableViewController.swift in Sources */,
+				F7BAC1C61DC9240700D52A80 /* Card.swift in Sources */,
 				B473F2971DC7E3C500205A2D /* LoginVC.swift in Sources */,
 				B473F2C51DC7E79400205A2D /* GameVC.swift in Sources */,
 				B473F2951DC7E3C500205A2D /* AppDelegate.swift in Sources */,

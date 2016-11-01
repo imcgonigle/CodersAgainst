@@ -21,7 +21,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
-        callCards(url: searchURL)
+        loadCards()
     }
     
     
@@ -41,6 +41,7 @@ class LoginVC: UIViewController {
             print(error)
         }
     }
+    
 
 }
 
