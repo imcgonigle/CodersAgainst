@@ -18,6 +18,9 @@ class GameVC: UIViewController {
     @IBOutlet weak var whiteCard5: UIButton!
     @IBOutlet weak var whiteCard6: UIButton!
     
+    @IBOutlet weak var gameResultsLabel: UILabel!
+    @IBOutlet weak var nextQuestionBtn: UIButton!
+    
     @IBOutlet weak var blabla: UIButton!
     var correctAnswer = String()
     
@@ -25,6 +28,7 @@ class GameVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
         randomQuestions()
+        hideResultsLabel()
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +37,23 @@ class GameVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // ACTION: Return to Login Page
+    @IBAction func returnToLoginPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // ACTION: Hide/Show ResultsLabel & next button
+    func hideResultsLabel() {
+        gameResultsLabel.isHidden = true
+        nextQuestionBtn.isHidden = true
+    }
+    
+    func unhideResultsLabel(){
+        gameResultsLabel.isHidden = false
+        nextQuestionBtn.isHidden = false
+    }
+    
+    // FUNCTION: Dyn generate black & white cards
     func randomQuestions(){
         var randomNumber = arc4random() % 6
         randomNumber += 1
@@ -83,58 +104,59 @@ class GameVC: UIViewController {
         }
     }
     
-    
-    // ACTION: Return to Login Page
-    @IBAction func returnToLoginPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     // ACTION: Next Question Generator
     @IBAction func newQuestion(_ sender: UIButton) {
         randomQuestions()
+        hideResultsLabel()
     }
     
     //    ACTION: Selected Card
-    @IBAction func whiteCard1Picked(_ sender: Any) {
+    @IBAction func whiteCard1Picked(_ sender: UIButton) {
+        unhideResultsLabel()
         if (correctAnswer == "1"){
-            NSLog("Winner, winner. Chicken dinner")
+            gameResultsLabel.text = "Winner, winner. Chicken dinner"
         } else {
-            NSLog("Looooooseer")
+            gameResultsLabel.text = "Nope...try again"
         }
     }
-    @IBAction func whiteCard2Picked(_ sender: Any) {
+    @IBAction func whiteCard2Picked(_ sender: UIButton) {
+        unhideResultsLabel()
         if (correctAnswer == "2"){
-            NSLog("Winner, winner. Chicken dinner")
+            gameResultsLabel.text = "Winner, winner. Chicken dinner"
         } else {
-            NSLog("Looooooseer")
+            gameResultsLabel.text = "Nope...try again"
         }
     }
-    @IBAction func whiteCard3Picked(_ sender: Any) {
+    @IBAction func whiteCard3Picked(_ sender: UIButton) {
+        unhideResultsLabel()
         if (correctAnswer == "3"){
-            NSLog("Winner, winner. Chicken dinner")
+            gameResultsLabel.text = "Winner, winner. Chicken dinner"
         } else {
-            NSLog("Looooooseer")
+            gameResultsLabel.text = "Nope...try again"
         }
     }
-    @IBAction func whiteCard4Picked(_ sender: Any) {
+    @IBAction func whiteCard4Picked(_ sender: UIButton) {
+        unhideResultsLabel()
         if (correctAnswer == "4"){
-            NSLog("Winner, winner. Chicken dinner")
+            gameResultsLabel.text = "Winner, winner. Chicken dinner"
         } else {
-            NSLog("Looooooseer")
+            gameResultsLabel.text = "Nope...try again"
         }
     }
-    @IBAction func whiteCard5Picked(_ sender: Any) {
+    @IBAction func whiteCard5Picked(_ sender: UIButton) {
+        unhideResultsLabel()
         if (correctAnswer == "5"){
-            NSLog("Winner, winner. Chicken dinner")
+            gameResultsLabel.text = "Winner, winner. Chicken dinner"
         } else {
-            NSLog("Looooooseer")
+            gameResultsLabel.text = "Nope...try again"
         }
     }
-    @IBAction func whiteCard6Picked(_ sender: Any) {
+    @IBAction func whiteCard6Picked(_ sender: UIButton) {
+        unhideResultsLabel()
         if (correctAnswer == "6"){
-            NSLog("Winner, winner. Chicken dinner")
+            gameResultsLabel.text = "Winner, winner. Chicken dinner"
         } else {
-            NSLog("Looooooseer")
+            gameResultsLabel.text = "Nope...try again"
         }
     }
     

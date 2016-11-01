@@ -88,19 +88,6 @@ HUMANITY</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP9-zg-cXv">
-                                <rect key="frame" x="16" y="0.0" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dvL-Lz-zZ6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="15"/>
-                                <state key="normal" title="&lt; BACK TO LOGIN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="returnToLoginPressed:" destination="Cyk-d8-b3i" eventType="touchUpInside" id="qgh-ff-fAG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9b-Vf-BVd">
                                 <rect key="frame" x="16" y="452" width="343" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -196,9 +183,8 @@ America needs _______</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-9L-9iw">
-                                <rect key="frame" x="16" y="284" width="343" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-9L-9iw">
+                                <rect key="frame" x="16" y="304" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next Question">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -207,37 +193,55 @@ America needs _______</string>
                                     <action selector="newQuestion:" destination="Cyk-d8-b3i" eventType="touchUpInside" id="6SG-zT-sI8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iep-AQ-hmc">
-                                <rect key="frame" x="0.0" y="266" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iep-AQ-hmc">
+                                <rect key="frame" x="16" y="283" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP9-zg-cXv">
+                                <rect key="frame" x="16" y="16" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b2m-h9-DdB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="15"/>
+                                <state key="normal" title="&lt; BACK TO LOGIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToLoginPressed:" destination="Cyk-d8-b3i" eventType="touchUpInside" id="qgh-ff-fAG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iep-AQ-hmc" firstAttribute="leading" secondItem="OBP-gG-tIx" secondAttribute="leadingMargin" id="0jJ-3q-i84"/>
+                            <constraint firstItem="aZf-9L-9iw" firstAttribute="trailing" secondItem="OBP-gG-tIx" secondAttribute="trailingMargin" id="2e9-WX-FXD"/>
                             <constraint firstItem="PR1-Tf-hzw" firstAttribute="trailing" secondItem="j2V-K3-59U" secondAttribute="trailing" id="9xd-Ms-Pol"/>
-                            <constraint firstItem="rqd-1D-M0W" firstAttribute="top" secondItem="OP9-zg-cXv" secondAttribute="bottom" constant="8" symbolic="YES" id="Dfi-JD-NEs"/>
+                            <constraint firstItem="aZf-9L-9iw" firstAttribute="top" secondItem="iep-AQ-hmc" secondAttribute="bottom" id="DHF-Hb-0VV"/>
                             <constraint firstItem="c4m-y6-hVN" firstAttribute="leading" secondItem="S9b-Vf-BVd" secondAttribute="leading" id="Ex7-p9-Oc2"/>
+                            <constraint firstItem="aZf-9L-9iw" firstAttribute="leading" secondItem="OBP-gG-tIx" secondAttribute="leadingMargin" id="Fmr-uL-0de"/>
                             <constraint firstItem="j2V-K3-59U" firstAttribute="trailing" secondItem="r6w-aM-7eA" secondAttribute="trailing" id="GXE-MY-8yv"/>
                             <constraint firstItem="c4m-y6-hVN" firstAttribute="top" secondItem="7pl-w7-h1P" secondAttribute="bottom" constant="8" symbolic="YES" id="Ggf-00-rLO"/>
-                            <constraint firstItem="OP9-zg-cXv" firstAttribute="leading" secondItem="rqd-1D-M0W" secondAttribute="leading" id="JKT-Co-GUR"/>
-                            <constraint firstItem="OP9-zg-cXv" firstAttribute="trailing" secondItem="rqd-1D-M0W" secondAttribute="trailing" id="Mid-sF-jC8"/>
+                            <constraint firstItem="OP9-zg-cXv" firstAttribute="top" secondItem="OBP-gG-tIx" secondAttribute="topMargin" constant="16" id="Kd7-1v-H3v"/>
                             <constraint firstItem="rqd-1D-M0W" firstAttribute="leading" secondItem="7pl-w7-h1P" secondAttribute="leading" id="OdI-wm-Pe2"/>
+                            <constraint firstItem="iep-AQ-hmc" firstAttribute="trailing" secondItem="OBP-gG-tIx" secondAttribute="trailingMargin" id="Rwz-jx-sa7"/>
                             <constraint firstItem="c4m-y6-hVN" firstAttribute="trailing" secondItem="S9b-Vf-BVd" secondAttribute="trailing" id="UfA-n0-AOm"/>
+                            <constraint firstItem="OP9-zg-cXv" firstAttribute="leading" secondItem="iep-AQ-hmc" secondAttribute="leading" id="UsK-7D-NcG"/>
                             <constraint firstItem="j2V-K3-59U" firstAttribute="leading" secondItem="r6w-aM-7eA" secondAttribute="leading" id="VG6-8e-3o7"/>
-                            <constraint firstItem="OP9-zg-cXv" firstAttribute="leading" secondItem="OBP-gG-tIx" secondAttribute="leadingMargin" id="ZYl-E5-gmA"/>
+                            <constraint firstItem="OP9-zg-cXv" firstAttribute="leading" secondItem="rqd-1D-M0W" secondAttribute="leading" id="Vvf-2f-h2J"/>
+                            <constraint firstItem="OP9-zg-cXv" firstAttribute="trailing" secondItem="rqd-1D-M0W" secondAttribute="trailing" id="WAA-ah-OL7"/>
+                            <constraint firstItem="7pl-w7-h1P" firstAttribute="top" secondItem="aZf-9L-9iw" secondAttribute="bottom" constant="8" id="ZP0-KC-HGy"/>
                             <constraint firstItem="S9b-Vf-BVd" firstAttribute="trailing" secondItem="PR1-Tf-hzw" secondAttribute="trailing" id="c0R-Zp-rLU"/>
-                            <constraint firstItem="OP9-zg-cXv" firstAttribute="top" secondItem="OBP-gG-tIx" secondAttribute="top" id="cKV-OV-cBk"/>
                             <constraint firstItem="S9b-Vf-BVd" firstAttribute="top" secondItem="c4m-y6-hVN" secondAttribute="bottom" constant="8" symbolic="YES" id="dER-C2-yEb"/>
                             <constraint firstItem="rqd-1D-M0W" firstAttribute="trailing" secondItem="7pl-w7-h1P" secondAttribute="trailing" id="ed5-h3-YfD"/>
+                            <constraint firstItem="OP9-zg-cXv" firstAttribute="trailing" secondItem="iep-AQ-hmc" secondAttribute="trailing" id="fDF-QD-b3V"/>
                             <constraint firstItem="hg4-H5-kx0" firstAttribute="top" secondItem="r6w-aM-7eA" secondAttribute="bottom" constant="15" id="fYr-oN-U9i"/>
                             <constraint firstItem="7pl-w7-h1P" firstAttribute="trailing" secondItem="c4m-y6-hVN" secondAttribute="trailing" id="h0J-Cq-u2y"/>
                             <constraint firstItem="j2V-K3-59U" firstAttribute="top" secondItem="PR1-Tf-hzw" secondAttribute="bottom" constant="8" symbolic="YES" id="iTe-lH-7Lb"/>
                             <constraint firstItem="r6w-aM-7eA" firstAttribute="top" secondItem="j2V-K3-59U" secondAttribute="bottom" constant="8" symbolic="YES" id="nV2-GW-EUv"/>
                             <constraint firstItem="PR1-Tf-hzw" firstAttribute="leading" secondItem="j2V-K3-59U" secondAttribute="leading" id="oBo-qR-TSh"/>
-                            <constraint firstItem="OP9-zg-cXv" firstAttribute="trailing" secondItem="OBP-gG-tIx" secondAttribute="trailingMargin" id="t4B-63-fi1"/>
+                            <constraint firstItem="rqd-1D-M0W" firstAttribute="top" secondItem="Nyd-gE-MXc" secondAttribute="bottom" constant="18" id="pdh-O3-Grc"/>
                             <constraint firstItem="7pl-w7-h1P" firstAttribute="leading" secondItem="c4m-y6-hVN" secondAttribute="leading" id="tlg-57-V8r"/>
                             <constraint firstItem="S9b-Vf-BVd" firstAttribute="leading" secondItem="PR1-Tf-hzw" secondAttribute="leading" id="wMf-ga-oUz"/>
                             <constraint firstItem="PR1-Tf-hzw" firstAttribute="top" secondItem="S9b-Vf-BVd" secondAttribute="bottom" constant="8" symbolic="YES" id="wxA-Dg-F9t"/>
@@ -245,6 +249,8 @@ America needs _______</string>
                     </view>
                     <connections>
                         <outlet property="blackCard" destination="rqd-1D-M0W" id="spZ-ep-oVM"/>
+                        <outlet property="gameResultsLabel" destination="iep-AQ-hmc" id="IvB-gj-H00"/>
+                        <outlet property="nextQuestionBtn" destination="aZf-9L-9iw" id="xrN-XL-PF0"/>
                         <outlet property="whiteCard1" destination="7pl-w7-h1P" id="MsJ-U8-tN8"/>
                         <outlet property="whiteCard2" destination="c4m-y6-hVN" id="Vso-Np-ff4"/>
                         <outlet property="whiteCard3" destination="S9b-Vf-BVd" id="3FC-Xw-o5q"/>
@@ -255,7 +261,7 @@ America needs _______</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0v-oT-9FU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909.60000000000002" y="36.431784107946029"/>
+            <point key="canvasLocation" x="844" y="37"/>
         </scene>
         <!--InstructionVC-->
         <scene sceneID="h4E-mw-646">
