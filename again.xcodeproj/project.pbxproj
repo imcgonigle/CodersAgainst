@@ -19,7 +19,8 @@
 		B473F2B51DC7E3C600205A2D /* againUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473F2B41DC7E3C600205A2D /* againUITests.swift */; };
 		B473F2C31DC7E55200205A2D /* InstructionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473F2C21DC7E55200205A2D /* InstructionVC.swift */; };
 		B473F2C51DC7E79400205A2D /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473F2C41DC7E79400205A2D /* GameVC.swift */; };
-		F788F3C51DC9024500E4C258 /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F3C41DC9024500E4C258 /* getData.swift */; };
+		F788F3C71DC9078200E4C258 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F3C61DC9078200E4C258 /* CardsTableViewController.swift */; };
+		F788F3C91DC90B7400E4C258 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F3C81DC90B7400E4C258 /* CardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,8 @@
 		B473F2C41DC7E79400205A2D /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		CC29CB994696C1D9F10869E1 /* Pods-againTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-againTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-againTests/Pods-againTests.release.xcconfig"; sourceTree = "<group>"; };
 		E08B587E0BD355292D52777D /* Pods_againTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_againTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F788F3C41DC9024500E4C258 /* getData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
+		F788F3C61DC9078200E4C258 /* CardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
+		F788F3C81DC90B7400E4C258 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				B473F2941DC7E3C500205A2D /* AppDelegate.swift */,
+				F788F3C81DC90B7400E4C258 /* CardTableViewCell.swift */,
+				F788F3C61DC9078200E4C258 /* CardsTableViewController.swift */,
 				B473F2961DC7E3C500205A2D /* LoginVC.swift */,
-				F788F3C41DC9024500E4C258 /* getData.swift */,
 				B473F2981DC7E3C500205A2D /* Main.storyboard */,
 				B473F29B1DC7E3C500205A2D /* Assets.xcassets */,
 				B473F29D1DC7E3C500205A2D /* LaunchScreen.storyboard */,
@@ -456,10 +459,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B473F2C31DC7E55200205A2D /* InstructionVC.swift in Sources */,
+				F788F3C71DC9078200E4C258 /* CardsTableViewController.swift in Sources */,
 				B473F2971DC7E3C500205A2D /* LoginVC.swift in Sources */,
 				B473F2C51DC7E79400205A2D /* GameVC.swift in Sources */,
-				F788F3C51DC9024500E4C258 /* getData.swift in Sources */,
 				B473F2951DC7E3C500205A2D /* AppDelegate.swift in Sources */,
+				F788F3C91DC90B7400E4C258 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
