@@ -8,54 +8,15 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
-
-func loadCards() -> ([Card], [Card]){
-    
-    var whiteCards = [Card]()
-    var blackCards = [Card]()
+func loadCards(callback: @escaping (Data) -> Void){
     
     let searchURL = "https://jsonagainsthumanity.herokuapp.com/"
     
-    
     Alamofire.request(searchURL).responseJSON(completionHandler : {
         response in
-      (blackCards, whiteCards) = parseData(JSONData: response.data!)
+        print("Got Cards")
+        callback(response.data!)
     })
- 
-    return (blackCards, whiteCards)
-}
 
-
-func parseData(JSONData : Data) -> ([Card], [Card]) {
-    do {
-        var blackCards = [Card]()
-        var whiteCards = [Card]()
-        
-        let json = JSON(data: JSONData)
-       
-        for i in 0..<json["blackCards"].count {
-            
-            var card = json["blackCards"][i]
-            let text = card["text"].string
-
-            if card["pick"] == 1 {
-                let card = Card(content: text!, type: "Black")
-                blackCards.append(card)
-            }
-
-        }
-        
-        for i in 0..<json["whiteCards"].count {
-            
-            let text = json["whiteCards"][i].string
-            let card = Card(content: text!, type: "White")
-            whiteCards.append(card)
-            
-        }
-        
-        return (blackCards, whiteCards)
-        
-    }
 }

@@ -8,40 +8,47 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LoginVC: UIViewController {
 
-    var blackCards = [String]()
-    var whiteCards = [String]()
+    var blackCards = [Card]()
+    var whiteCards = [Card]()
     
-    var searchURL = "https://jsonagainsthumanity.herokuapp.com/"
-    typealias JSONStandard = [String: AnyObject]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
-        loadCards()
+        loadCards(callback: addToDeckCallback)
+        
     }
     
     
-    func callCards(url: String) {
-        Alamofire.request(url).responseJSON(completionHandler : {
-            response in
-            self.parseData(JSONData: response.data!)
-        })
-    }
-    
-    func parseData(JSONData : Data) {
-        do {
-            var readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
-            print(readableJSON["blackCards"])
+    func addToDeckCallback(JSONData : Data){
+        
+        let json = JSON(data: JSONData)
+        
+        for i in 0..<json["blackCards"].count {
+            
+            var card = json["blackCards"][i]
+            let text = card["text"].string
+            
+            if card["pick"] == 1 {
+                let card = Card(content: text!, type: "Black")
+                self.blackCards.append(card)
+            }
+            
         }
-        catch {
-            print(error)
+        
+        for i in 0..<json["whiteCards"].count {
+            
+            let text = json["whiteCards"][i].string
+            let card = Card(content: text!, type: "White")
+            self.whiteCards.append(card)
+            
         }
+        
     }
-    
-
 }
+
 
